@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>🔥 Hilarious Jokes Just for You! 🔥</title>
+  
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <!-- Bootstrap CDN -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  
+  <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+  <div class="container">
+    <div class="jumbotron text-center">
+      <h1 class="display-3">🤣 Welcome to the Ultimate Joke Generator! 🎭</h1>
+      <p class="lead">Enter your name and get an epic joke just for YOU!</p>
+      <hr class="my-4">
+    </div>
+
+    <!-- Form -->
+    <form action="/get-joke" method="get" class="form-inline justify-content-center">
+        <input type="text" name="name" class="form-control mb-2 mr-2" placeholder="Enter your name" required>
+    
+        <select name="category" class="form-control mb-2 mr-2">
+            <option value="Any">Random</option>
+            <option value="Programming">Programming</option>
+            <option value="Pun">Pun</option>
+            <option value="Dark">Dark</option>
+        </select>
+    
+        <button type="submit" class="btn btn-primary mb-2">🔥 Get a Joke! 🔥</button>
+    </form>
+    
+
+    <% if (joke) { %>
+      <div class="alert mt-4">
+        <h4 class="alert-heading">Here’s a joke for <%= name %>:</h4>
+        <p><%= joke %></p>
+      </div>
+    <% } %>
+  </div>
+
+  <!-- Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
