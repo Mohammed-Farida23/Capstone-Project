@@ -13,7 +13,7 @@ This project is a web application built with Node.js, Express.js, and EJS. It in
    npm install
 3. **Start the server**:
    ```bash
-  node index.js
+   node index.js
 4. **Open your browser and go to http://localhost:3000 to view the app.**:
 
 ## Technologies Used
